@@ -1,4 +1,17 @@
-.myClass{
-    color:darkred;
+.myClass {
+    color: darkred;
     text-align: center;
+}
+
+.myRow {
+    height: 100px;
+    width:200px;
+    border-bottom: solid;
+    background-color:#999999;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.test{
+    text-align: center;
+    padding-left: 60px!important;
 }
