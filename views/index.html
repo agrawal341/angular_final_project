@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
 </head>
-<body>
+<body ng-app="app">
+<div ng-controller="appController">
+    <div class="container">
+        <div class="bg-success">
+            <div class="myClass">
+                <title-directive></title-directive>
+                {{test}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 test">
+            <div class="container">
+                <div ng-repeat="itemtype in itemTypeof">
+                    <div>
+                        <div class="myRow">
+                            <span ng-click="setSelectedItem(itemtype.itemId)" >{{itemtype.itemDescp}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="container">
+                <div class="col-md-9">
+                    <product-directive></product-directive>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src="/angular_final_project/node_modules/angular/angular.js"></script>
+<script type='text/javascript' src="/angular_final_project/js/app.js"></script>
+<script type="text/javascript" src="/angular_final_project/js/controllers/appController.js"></script>
+<script type="text/javascript" src="/angular_final_project/js/services/itemServices.js"></script>
+<script type="text/javascript" src="/angular_final_project/js/directives/productDirective.js"></script>
+<script type="text/javascript" src="/angular_final_project/js/directives/titleDirective.js"></script>
+
 
 </body>
 </html>
