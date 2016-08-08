@@ -4,9 +4,13 @@
 angular.module('app').directive('productDirective',[function ($scope) {
     return{
         restrict:'EA',
+        scope:true,
         templateUrl:'/angular_final_project/views/products.html',
         link:function () {
-            alert('inside landing directive');
-        }
+           // alert('inside landing directive');
+        },
+        controller:'appController'
+            
+
     }
 }]);

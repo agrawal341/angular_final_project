@@ -16,12 +16,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3">
-            <div class="container test">
-                <div ng-repeat="itemType in itemLists">
+        <div class="col-md-3 test">
+            <div class="container">
+                <div ng-repeat="itemtype in itemTypeof">
                     <div>
                         <div class="myRow">
-                            <a href="#">{{itemType}}</a>
+                            <span ng-click="setSelectedItem(itemtype.itemId)" >{{itemtype.itemDescp}}</span>
                         </div>
                     </div>
                 </div>
@@ -30,9 +30,7 @@
         <div class="col-md-9">
             <div class="container">
                 <div class="col-md-9">
-                    <product-directive>
-                        This is call from landing index
-                    </product-directive>
+                    <product-directive></product-directive>
                 </div>
             </div>
         </div>
@@ -40,10 +38,11 @@
 </div>
 <script type='text/javascript' src="/angular_final_project/node_modules/angular/angular.js"></script>
 <script type='text/javascript' src="/angular_final_project/js/app.js"></script>
-<script type="text/javascript" src="/angular_final_project/js/services/itemServices.js"></script>
 <script type="text/javascript" src="/angular_final_project/js/controllers/appController.js"></script>
+<script type="text/javascript" src="/angular_final_project/js/services/itemServices.js"></script>
+<script type="text/javascript" src="/angular_final_project/js/directives/productDirective.js"></script>
 <script type="text/javascript" src="/angular_final_project/js/directives/titleDirective.js"></script>
-<script type="text/javascript" src="/angular_final_project/js/directives/landingDirective.js"></script>
+
 
 </body>
 </html>
