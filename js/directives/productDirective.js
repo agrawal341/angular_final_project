@@ -7,7 +7,7 @@ angular.module('app').directive('productDirective',[function ($scope) {
         scope:true,
         templateUrl:'/angular_final_project/views/products.html',
         link:function () {
-           // alert('inside landing directive');
+           // alert('inside product directive');
         },
         controller:'appController'
             

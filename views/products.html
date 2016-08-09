@@ -1,5 +1,18 @@
-
-<div ng-repeat="item in sortedlist">
-    <h3>{{itemTypeof[item.itemType-1].itemDescp}}</h3>
-    {{item}}
+<h3 style="text-align: center"> {{itemDescp}}</h3>
+<div class="productrow">
+    <div class="row container">
+        <div ng-repeat="item in sortedlist | orderBy:'itemName'">
+            <!--<h3 style="text-align: center">{{itemTypeof[item.itemType-1].itemDescp}}</h3>-->
+            <div class="col-md-5">
+                <div class="container-fluid product">
+                    <label><img style="height: 200px; width: 300px; border-radius: 10px;"
+                                ng-src="{{item.src}}"/></label><br/>
+                    <label >Name: {{item.itemName}}</label><br/>
+                    <label>Price: {{item.price|filter: currency}}</label><br/>
+                    <label>Description: {{item.description}}</label><br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>

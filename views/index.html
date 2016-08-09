@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/carousel.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
 </head>
-<body ng-app="app">
+<body ng-app="app" style="background-color: #afd9ee;">
 <div ng-controller="appController">
-    <div class="container">
-        <div class="bg-success">
-            <div class="myClass">
-                <title-directive></title-directive>
-                {{test}}
+    <div class="statictitle">
+        <div class="container">
+            <div style="background-color: oldlace; border-radius: 10px;">
+                <div class="myClass">
+                    <title-directive></title-directive>
+                    <!--{{test}}-->
+                </div>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="padding-top: 50px;">
         <div class="col-md-3 test">
             <div class="container">
-                <div ng-repeat="itemtype in itemTypeof">
-                    <div>
-                        <div class="myRow">
-                            <span ng-click="setSelectedItem(itemtype.itemId)" >{{itemtype.itemDescp}}</span>
+                <div class="staticmenu">
+                    <div ng-repeat="itemtype in itemTypeof">
+                        <div class="myRow" style="background-color: oldlace;">
+                            <span ng-click="setSelectedItem(itemtype.itemId, itemtype.itemDescp)">
+                               <br/> <span>{{itemtype.itemDescp}}</span>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-9">
+        <div style="padding-top: 100px; padding-left: 300px;">
             <div class="container">
-                <div class="col-md-9">
-                    <product-directive></product-directive>
+                <div class="col-md-9" style="z-index: -1;">
+                    <landing-directive ng-if="selectId==0"></landing-directive>
+                    <product-directive ng-if="selectId!=0"></product-directive>
                 </div>
             </div>
         </div>
@@ -38,8 +44,11 @@
 </div>
 <script type='text/javascript' src="/angular_final_project/node_modules/angular/angular.js"></script>
 <script type='text/javascript' src="/angular_final_project/js/app.js"></script>
+<script type='text/javascript' src="/angular_final_project/node_modules/jquery/dist/jquery.min.js"></script>
+<script type='text/javascript' src="/angular_final_project/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/angular_final_project/js/controllers/appController.js"></script>
 <script type="text/javascript" src="/angular_final_project/js/services/itemServices.js"></script>
+<script type="text/javascript" src="/angular_final_project/js/directives/landingDirective.js"></script>
 <script type="text/javascript" src="/angular_final_project/js/directives/productDirective.js"></script>
 <script type="text/javascript" src="/angular_final_project/js/directives/titleDirective.js"></script>
 

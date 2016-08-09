@@ -6,8 +6,9 @@ angular.module('app').controller('appController', ['$scope', 'itemListService', 
     $scope.itemTypeof = itemListService.itemTypes;
     $scope.itemlist = itemListService.items;
 
-    $scope.setSelectedItem = function (selectedId) {
+    $scope.setSelectedItem = function (selectedId, itemDescp) {
         $scope.selectId = selectedId;
+        $scope.itemDescp = itemDescp;
         //alert($scope.selectId);
         $scope.sortedlist=[];
         for(var i=0;i<$scope.itemlist.length;i++){

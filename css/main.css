@@ -1,18 +1,38 @@
 .myClass {
     color: darkred;
     text-align: center;
+    border-radius: 10px;
+    height: 120px;
+    padding-top: 15px;
 }
 
 .myRow {
-    height: 100px;
+    cursor: pointer;
+    height: 85px;
     width:200px;
     border-bottom: solid;
     background-color:#999999;
     font-size: 18px;
     border-radius: 10px;
+    text-decoration-color: darkred;
 }
 .test{
     text-align: center;
     padding-top: 10px;
-    padding-left: 60px!important;
+    padding-left: 80px!important;
+}
+.product{
+    padding:15px;
+
+}
+.productrow > table-bordered{
+    padding-left: -15px;
+}
+.staticmenu{
+    position: fixed;
+    top: 150px;
+}
+.statictitle{
+    position: fixed;
+    padding-left: 65px;
 }
